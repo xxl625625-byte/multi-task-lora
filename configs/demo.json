@@ -1,0 +1,22 @@
+{
+  "seed": 42,
+  "rank": 8,
+  "alpha": 8,
+  "lr": 0.0001,
+  "steps_T": 8,
+  "f1_margin": 0.01,
+  "norm_ratio_limit": 1.5,
+  "spectral_gap_min": 1.5,
+  "route_margin": 0.1,
+  "min_dev_for_merge": 1,
+  "formal_min_dev_for_merge": 200,
+  "dev_floor_relaxed": true,
+  "d_model": 32,
+  "n_layers": 2,
+  "n_heads": 4,
+  "max_length": 256,
+  "near_holdout": "商品是否一致",
+  "far_holdout": "电销用户意图识别",
+  "target_modules": ["q_proj", "v_proj"],
+  "base_name": "tiny-causal"
+}
