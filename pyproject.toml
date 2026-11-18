@@ -3,7 +3,13 @@ name = "decision-lora"
 version = "0.1.0"
 description = "多任务决策 LoRA：探针合并、通用语料投影相减、整题路由"
 requires-python = ">=3.9"
-dependencies = ["numpy>=1.26", "torch>=2.2"]
+dependencies = [
+    "numpy>=1.26",
+    "torch>=2.2",
+    "transformers>=4.51,<5",
+    "peft>=0.15,<0.19",
+    "safetensors>=0.4",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]

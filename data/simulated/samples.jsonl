@@ -1,40 +1,30 @@
-{"case_id": "addr-1", "task": "地址核验", "material": "店铺名：海淀商贸\n地址一：北京市海淀区中关村大街1号\n地址二：北京海淀区中关村大街1号", "answer": "B", "variant": "original"}
-{"case_id": "addr-1", "task": "地址核验", "material": "店铺名：景和商行\n地址一：北京市海淀区中关村大街1号\n地址二：北京海淀区中关村大街1号", "answer": "B", "variant": "name_swap"}
-{"case_id": "addr-2", "task": "地址核验", "material": "店铺名：临港五金\n地址一：北京市海淀区中关村大街1号\n地址二：上海市浦东新区世纪大道8号", "answer": "A", "variant": "original"}
-{"case_id": "addr-2", "task": "地址核验", "material": "店铺名：临港五金\n地址一：北京市海淀区中关村大街1号\n地址二：（缺失）", "answer": "C", "variant": "field_blank"}
-{"case_id": "brand-1", "task": "品牌名写法", "material": "店铺名：青云手机\n名称一：青云手机\n名称二：青云 手机", "answer": "B", "variant": "original"}
-{"case_id": "brand-1", "task": "品牌名写法", "material": "店铺名：白露数码\n名称一：白露数码\n名称二：白露 手机", "answer": "B", "variant": "name_swap"}
-{"case_id": "brand-2", "task": "品牌名写法", "material": "店铺名：青云手机\n名称一：青云手机\n名称二：南山家电", "answer": "A", "variant": "original"}
-{"case_id": "link-1", "task": "企业是否存在交集", "material": "企业甲：海淀商贸\n企业乙：临港五金\n关系证据：股东同为赵某", "answer": "B", "variant": "original"}
-{"case_id": "link-1", "task": "企业是否存在交集", "material": "企业甲：景和商行\n企业乙：东岸器材\n关系证据：股东同为赵某", "answer": "B", "variant": "name_swap"}
-{"case_id": "link-2", "task": "企业是否存在交集", "material": "企业甲：海淀商贸\n企业乙：临港五金\n关系证据：仅名称不同，无股东或地址记录", "answer": "A", "variant": "original"}
-{"case_id": "link-2", "task": "企业是否存在交集", "material": "企业甲：海淀商贸\n企业乙：临港五金\n关系证据：（缺失）", "answer": "C", "variant": "field_blank"}
-{"case_id": "store-1", "task": "店企核验", "material": "店铺名：海淀商贸\n执照主体：海淀商贸有限公司\n执照主体：海淀商贸有限公司", "answer": "B", "variant": "original"}
-{"case_id": "store-1", "task": "店企核验", "material": "店铺名：景和商行\n执照主体：景和商行有限公司\n执照主体：景和商行有限公司", "answer": "B", "variant": "name_swap"}
-{"case_id": "store-2", "task": "店企核验", "material": "店铺名：海淀商贸\n执照主体：临港五金厂", "answer": "A", "variant": "original"}
-{"case_id": "store-2", "task": "店企核验", "material": "店铺名：海淀商贸\n执照主体：（缺失）", "answer": "C", "variant": "field_blank"}
-{"case_id": "auth-1", "task": "品牌名授权", "material": "店铺名：青云手机\n品牌：青云\n授权材料：品牌方授权书编号 QY-1", "answer": "B", "variant": "original"}
-{"case_id": "auth-1", "task": "品牌名授权", "material": "店铺名：白露数码\n品牌：白露\n授权材料：品牌方授权书编号 QY-1", "answer": "B", "variant": "name_swap"}
-{"case_id": "auth-2", "task": "品牌名授权", "material": "店铺名：青云手机\n品牌：青云\n授权材料：无", "answer": "A", "variant": "original"}
-{"case_id": "bulk-1", "task": "大宗商品判别", "material": "商品名称：螺纹钢", "answer": "B", "variant": "original"}
-{"case_id": "bulk-2", "task": "大宗商品判别", "material": "商品名称：青云手机", "answer": "A", "variant": "original"}
-{"case_id": "sens-1", "task": "敏感品名识别", "material": "品名：盐酸", "answer": "B", "variant": "original"}
-{"case_id": "sens-2", "task": "敏感品名识别", "material": "品名：螺纹钢", "answer": "A", "variant": "original"}
-{"case_id": "agent-1", "task": "中介机构识别", "material": "企业名：海淀商贸\n经营证据：经营范围含商务代理", "answer": "B", "variant": "original"}
-{"case_id": "agent-1", "task": "中介机构识别", "material": "企业名：景和商行\n经营证据：经营范围含商务代理", "answer": "B", "variant": "name_swap"}
-{"case_id": "agent-2", "task": "中介机构识别", "material": "企业名：临港五金\n经营证据：经营范围只有金属零售", "answer": "A", "variant": "original"}
-{"case_id": "whole-1", "task": "批发商身份识别", "material": "企业名：华北粮油\n经营范围：谷物批发", "answer": "B", "variant": "original"}
-{"case_id": "whole-1", "task": "批发商身份识别", "material": "企业名：南埔米业\n经营范围：谷物批发", "answer": "B", "variant": "name_swap"}
-{"case_id": "whole-2", "task": "批发商身份识别", "material": "企业名：临港五金\n经营范围：五金零售", "answer": "A", "variant": "original"}
-{"case_id": "lic-1", "task": "是否需要许可", "material": "经营活动：危险化学品经营", "answer": "B", "variant": "original"}
-{"case_id": "lic-2", "task": "是否需要许可", "material": "经营活动：日用百货零售", "answer": "A", "variant": "original"}
-{"case_id": "lic-2", "task": "是否需要许可", "material": "经营活动：（缺失）", "answer": "C", "variant": "field_blank"}
-{"case_id": "scope-1", "task": "经营范围覆盖", "material": "经营范围：金属材料销售\n销项商品：螺纹钢", "answer": "B", "variant": "original"}
-{"case_id": "scope-2", "task": "经营范围覆盖", "material": "经营范围：金属材料销售\n销项商品：青云手机", "answer": "A", "variant": "original"}
-{"case_id": "scope-2", "task": "经营范围覆盖", "material": "经营范围：金属材料销售\n销项商品：（缺失）", "answer": "C", "variant": "field_blank"}
-{"case_id": "item-1", "task": "商品是否一致", "material": "店铺名：青云手机\n记录一：青云手机 128G\n记录二：青云 手机 128G", "answer": "B", "variant": "original"}
-{"case_id": "item-1", "task": "商品是否一致", "material": "店铺名：白露数码\n记录一：白露数码 128G\n记录二：白露 手机 128G", "answer": "B", "variant": "name_swap"}
-{"case_id": "item-2", "task": "商品是否一致", "material": "店铺名：青云手机\n记录一：青云手机 128G\n记录二：青云手机 256G", "answer": "A", "variant": "original"}
-{"case_id": "item-2", "task": "商品是否一致", "material": "店铺名：青云手机\n记录一：青云手机 128G\n记录二：（缺失）", "answer": "C", "variant": "field_blank"}
-{"case_id": "call-1", "task": "电销用户意图识别", "material": "坐席：考虑办一张卡吗？\n客户：利率多少，下周可以签。", "answer": "B", "variant": "original"}
-{"case_id": "call-2", "task": "电销用户意图识别", "material": "坐席：考虑办一张卡吗？\n客户：不需要，请不要再打。", "answer": "A", "variant": "original"}
+{"case_id": "bulk-1", "task": "大宗商品判别", "material": "商品名称：螺纹钢", "answer": "A", "variant": "original"}
+{"case_id": "bulk-2", "task": "大宗商品判别", "material": "商品名称：青云手机", "answer": "B", "variant": "original"}
+{"case_id": "tob-1", "task": "是否烟草许可", "material": "企业名称：海淀商贸\n经营范围：卷烟零售", "answer": "A", "variant": "original"}
+{"case_id": "tob-1", "task": "是否烟草许可", "material": "企业名称：景和商行\n经营范围：卷烟零售", "answer": "A", "variant": "name_swap"}
+{"case_id": "tob-2", "task": "是否烟草许可", "material": "企业名称：新疆邸一餐饮管理有限公司\n经营范围：餐饮服务", "answer": "B", "variant": "original"}
+{"case_id": "road-1", "task": "是否道路运输许可", "material": "企业名称：临港五金\n经营范围：道路货物运输", "answer": "A", "variant": "original"}
+{"case_id": "road-1", "task": "是否道路运输许可", "material": "企业名称：东岸器材\n经营范围：道路货物运输", "answer": "A", "variant": "name_swap"}
+{"case_id": "road-2", "task": "是否道路运输许可", "material": "企业名称：新疆邸一餐饮管理有限公司\n经营范围：餐饮服务", "answer": "B", "variant": "original"}
+{"case_id": "food-1", "task": "是否食品许可", "material": "企业名称：新疆邸一餐饮管理有限公司\n经营范围：餐饮服务", "answer": "A", "variant": "original"}
+{"case_id": "food-2", "task": "是否食品许可", "material": "企业名称：临港五金\n经营范围：金属材料销售", "answer": "B", "variant": "original"}
+{"case_id": "build-1", "task": "是否建筑市场资质", "material": "企业名称：华北粮油\n经营范围：房屋建筑工程施工", "answer": "A", "variant": "original"}
+{"case_id": "build-1", "task": "是否建筑市场资质", "material": "企业名称：南埔米业\n经营范围：房屋建筑工程施工", "answer": "A", "variant": "name_swap"}
+{"case_id": "build-2", "task": "是否建筑市场资质", "material": "企业名称：临港五金\n经营范围：金属材料销售", "answer": "B", "variant": "original"}
+{"case_id": "fran-1", "task": "是否商务特许许可", "material": "企业名称：青云手机\n经营范围：商业特许经营", "answer": "A", "variant": "original"}
+{"case_id": "fran-1", "task": "是否商务特许许可", "material": "企业名称：白露数码\n经营范围：商业特许经营", "answer": "A", "variant": "name_swap"}
+{"case_id": "fran-2", "task": "是否商务特许许可", "material": "企业名称：新疆邸一餐饮管理有限公司\n经营范围：餐饮服务", "answer": "B", "variant": "original"}
+{"case_id": "pol-1", "task": "是否有排污许可", "material": "企业名称：临港五金\n经营范围：金属表面处理", "answer": "A", "variant": "original"}
+{"case_id": "pol-1", "task": "是否有排污许可", "material": "企业名称：东岸器材\n经营范围：金属表面处理", "answer": "A", "variant": "name_swap"}
+{"case_id": "pol-2", "task": "是否有排污许可", "material": "企业名称：新疆邸一餐饮管理有限公司\n经营范围：餐饮服务", "answer": "B", "variant": "original"}
+{"case_id": "whole-1", "task": "批发商身份识别", "material": "企业名称：华北粮油\n经营范围：谷物批发", "answer": "A", "variant": "original"}
+{"case_id": "whole-1", "task": "批发商身份识别", "material": "企业名称：南埔米业\n经营范围：谷物批发", "answer": "A", "variant": "name_swap"}
+{"case_id": "whole-2", "task": "批发商身份识别", "material": "企业名称：武汉市江夏区水之缘茶饮店\n经营范围：甜品、饮料制售", "answer": "B", "variant": "original"}
+{"case_id": "addr-1", "task": "地址核验", "material": "地址一：北京市海淀区中关村大街1号\n地址二：北京海淀区中关村大街1号", "answer": "G", "variant": "original"}
+{"case_id": "addr-2", "task": "地址核验", "material": "地址一：北京市海淀区中关村大街1号\n地址二：上海市浦东新区世纪大道8号", "answer": "A", "variant": "original"}
+{"case_id": "addr-2", "task": "地址核验", "material": "地址一：北京市海淀区中关村大街1号\n地址二：（缺失）", "answer": "I", "variant": "field_blank"}
+{"case_id": "store-1", "task": "店企核验", "material": "店铺信息：{\"dp_name\": \"海淀商贸\", \"tx_industry\": \"五金\"}\n工商信息：{\"gs_name\": \"海淀商贸有限公司\", \"opscope\": \"五金零售\", \"gs_industry\": \"零售\"}", "answer": "A", "variant": "original"}
+{"case_id": "store-1", "task": "店企核验", "material": "店铺信息：{\"dp_name\": \"景和商行\", \"tx_industry\": \"五金\"}\n工商信息：{\"gs_name\": \"景和商行有限公司\", \"opscope\": \"五金零售\", \"gs_industry\": \"零售\"}", "answer": "A", "variant": "name_swap"}
+{"case_id": "store-2", "task": "店企核验", "material": "店铺信息：{\"dp_name\": \"海淀商贸\", \"tx_industry\": \"五金\"}\n工商信息：{\"gs_name\": \"新疆邸一餐饮管理有限公司\", \"opscope\": \"餐饮服务\", \"gs_industry\": \"餐饮\"}", "answer": "B", "variant": "original"}
+{"case_id": "brand-1", "task": "品牌名和店铺名一致性判别", "material": "店铺名称：HUAWEI（授权店）\n品牌名称：华为HUAWEI", "answer": "A", "variant": "original"}
+{"case_id": "brand-2", "task": "品牌名和店铺名一致性判别", "material": "店铺名称：水之缘茶饮\n品牌名称：华为HUAWEI", "answer": "B", "variant": "original"}

@@ -19,9 +19,11 @@ from decision_lora.residual import (
     separate_ab_product,
 )
 from decision_lora.routing import expert_score, filter_by_modality, route
-from decision_lora.schema import cannot_merge, task_cards
+from decision_lora.folds import load_groups, split_fold
+from decision_lora.schema import cannot_merge, task_cards, task_order
 from decision_lora.simulate import build_samples
 from decision_lora.splits import assign_splits
+from pathlib import Path
 
 
 class MergeTests(unittest.TestCase):
@@ -150,26 +152,29 @@ class GateTests(unittest.TestCase):
 
 
 class DataTests(unittest.TestCase):
-    def test_holdout_and_case_stay_together(self):
+    def test_cases_stay_together_inside_a_fold(self):
         cards = task_cards()
+        self.assertEqual(len(task_order()), 11)
         samples = build_samples(cards)
         splits = assign_splits(samples, cards, seed=42)
         train_cases = {(row.task, row.case_id) for row in splits["train"]}
         dev_cases = {(row.task, row.case_id) for row in splits["dev"]}
         self.assertFalse(train_cases & dev_cases)
-        self.assertTrue(all(cards[row.task].holdout == "near" for row in splits["holdout_near"]))
-        self.assertTrue(all(row.task == "电销用户意图识别" for row in splits["holdout_far"]))
-        self.assertIn("商品是否一致", {row.task for row in splits["holdout_near"]})
+        self.assertEqual(splits["holdout_near"], [])
+        groups = load_groups(Path(__file__).resolve().parents[1] / "configs" / "groups.json")
+        for group in groups:
+            fold = split_fold(samples, group)
+            self.assertEqual(len(set(row.task for row in fold["ood"])), 3)
+            self.assertFalse({row.task for row in fold["train"]} & set(group["ood_tasks"]))
+            train_ids = {(row.task, row.case_id) for row in fold["train"]}
+            dev_ids = {(row.task, row.case_id) for row in fold["dev"]}
+            self.assertFalse(train_ids & dev_ids)
 
     def test_lenient_and_strict_cannot_share_a_lora(self):
         cards = task_cards()
-        reason = cannot_merge(cards["地址核验"], cards["企业是否存在交集"])
-        self.assertEqual(reason, "容差方向相反")
-        self.assertIsNone(cannot_merge(cards["大宗商品判别"], cards["敏感品名识别"]))
-        self.assertEqual(
-            cannot_merge(cards["地址核验"], cards["电销用户意图识别"]),
-            "输出形式不同",
-        )
+        self.assertEqual(cannot_merge(cards["店企核验"], cards["批发商身份识别"]), "容差方向相反")
+        self.assertIsNone(cannot_merge(cards["大宗商品判别"], cards["是否烟草许可"]))
+        self.assertEqual(cannot_merge(cards["地址核验"], cards["批发商身份识别"]), "输出形式不同")
 
 
 if __name__ == "__main__":

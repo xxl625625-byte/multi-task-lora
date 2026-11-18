@@ -46,6 +46,20 @@ def high_cost_rate(truth: list[str], pred: list[str], high_cost: str | None) -> 
     return errors / eligible
 
 
+def accuracy(truth: list[str], pred: list[str]) -> float:
+    if not truth:
+        return 0.0
+    return sum(gold == guess for gold, guess in zip(truth, pred)) / len(truth)
+
+
+def positive_recall(truth: list[str], pred: list[str], positive: str = "A") -> float | None:
+    golds = sum(gold == positive for gold in truth)
+    if golds == 0:
+        return None
+    hits = sum(gold == positive and guess == positive for gold, guess in zip(truth, pred))
+    return hits / golds
+
+
 def average_tasks(scores: dict[str, float]) -> float:
     if not scores:
         return 0.0
